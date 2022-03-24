@@ -1,0 +1,223 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font: bold 18px/1.4 'Open Sans', arial, sans-serif;
+  color: #5C0300;
+}
+
+header {
+  background: url(/images/forest-3622519.jpg) no-repeat;
+  height: 130vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+
+
+main{
+  margin-top: -5vh;
+  padding-top: 15vh;
+  background-image: linear-gradient(rgba(55,107,68, 1), #D1CDA7, #FBF9EC);
+  backdrop-filter: blur(50px);
+  box-shadow: 0 -20px 20px 0px rgba(55,107,68, 1);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: fixed;
+  height: 65vh;
+  z-index: 1;
+  right: 0;
+  margin: 50px;
+  margin-top: 25vh;
+  background-color: rgba(0,92,32,0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 1px 1px 20px rgb(0, 0, 0);
+  padding: 20px 0;
+  border-radius: 15px;
+}
+.navbar {
+  width: 150px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+.logo {
+  position: fixed;
+  height: 10vh;
+  z-index: 1;
+  right: 0;
+  margin: 50px;
+  padding-top: 2px;
+  background-color: rgba(0,92,32,0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 1px 1px 20px rgb(0, 0, 0);
+  border-radius: 15px;
+  border-bottom: 0;
+  font-family: "Aguafina Script";
+  font-size: 36px;  
+  text-align: center;
+  text-decoration: none;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: rgba(218, 165, 32);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white; 
+  font-weight: 700;
+  display: inline-block;
+  position:relative;
+}
+
+i {
+  margin: 6px;
+  color: white;
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+.navbar:hover {
+  background-color: #FFFFFF44;
+  border-radius: 15px;
+  box-shadow: inset 1px 1px 20px white;
+  animation: bounce 1s;
+  text-shadow: -1px -1px 0 rgba(218, 165, 32), 1px -1px 0 rgba(218, 165, 32), -1px 1px 0 rgba(218, 165, 32), 1px 1px 0 rgba(218, 165, 32);
+  
+}
+.logo:hover {
+  background-color:rgba(0,92,32,0.7);
+  box-shadow: inset 1px 1px 20px white;
+}
+ 
+.about,
+.kontakt,
+.rezepte {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #0087ca;
+}
+
+
+
+.hero {
+  display: flex;
+  padding-top: 50px;
+  margin-left: 7vw;
+  justify-content: flex-start;
+}
+
+h1 {
+  line-height: 250%;
+  font-size: 4rem;
+  text-decoration: underline green; 
+  text-underline-offset: 9px;
+  letter-spacing: 3px;
+  background-color: #470301;
+  color: transparent;
+  text-shadow: 2px 2px 3px #ffffff50;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+button {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  color: white;
+  background-color: rgb(61, 44, 6);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+button:hover {
+  box-shadow: inset 1px 1px 20px rgb(0, 0, 0)
+}
+
+#formular {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8vw;
+  
+  width: 65%;
+  padding: 3vh;
+  background-color: rgba(0,92,32,0.7);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 8px 0px;
+  margin-bottom: 20px;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 3px rgb(0, 0, 0);
+  
+}
+.phone {
+  display: flex;
+  justify-content: space-between;
+}
+.rr,
+.telefon {
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.checkbox {
+  padding: 0 20px;
+}
+.telefon {
+  flex: 1;
+}
+
+#rr {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  margin-top: 15px;
+}
+
+::placeholder {
+  font-style: italic;
+  position: absolute;
+  white-space: pre-line;
+}
+
+
+
+
+
+
+

@@ -2,19 +2,58 @@
 <html lang="de">
   
   <head>
-    <title>Trüffel</title>
+    <title>Trüffeling</title>
     <meta charset="UTF-8">
     <meta name="author" content="Christoph Schmid">
 
     <!--Hier noch den "Content" mit einer Beschreibung und guten Suchbegriffen (keywords) füllen-->
     <meta name="description" content="tba..">
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+    <link href='https://css.gg/profile.css' rel='stylesheet'>
+    <link href='https://css.gg/mail.css' rel='stylesheet'>
+    <link href='https://css.gg/bowl.css' rel='stylesheet'>
   </head>
 
   <body>
-    <header>
-      <h1>Trüffelfreunde</h1>
+    <header id="header">
       
+        <a href="#header" class="navbar logo">Trüffeling</a>
+      <nav class="sidebar">
+        <div class="navbar about"><i class="gg-profile"></i><a href="#">ÜBER UNS</a></div>
+        <div class="navbar rezepte"><i class="gg-bowl"></i><a href="#">REZEPTE</a></div>
+        <div class="navbar kontakt"><i class="gg-mail"></i><a href="#formular">KONTAKT</a></div>
+      </nav>
+      
+      <div class="hero color">
+        <div id="herotext">
+          <h1>FEINSTE TRÜFFEL.<br>HANDGELESEN.</h1>
+          <button>HIER BESTELLEN</button>
+        </div>
+      </div>
     </header>
+    
+    <main>
+      <div id="formular"><h2>HOLEN SIE SICH IHRE PREISAUSKUNFT</h2>
+        <p>Jeder Feinschmecker weiß: Trüffel aus Rumänien sind etwas ganz besonderes! Daher behandeln wir jeden Trüffel auch besonders. Schreiben Sie uns einfach mit dem unten stehendem Formular, wir können Sie persönlich nach Ihren Wünschen und Bedürfnissen beraten. Für Privatkunden, Großkunden, Restaurants, Patisserien & Feinschmeckerladen.</p>
+        <form>
+          <label for="vname">Vorname:</label><br>
+          <input type="text" id="vname" name="vname" placeholder="Vorname..."><br>
+          <label for="nname">Nachname:</label><br>
+          <input type="text" id="nname" name="nname" placeholder="Nachname..."><br>
+          <label for="firma">Firma:</label><br>
+          <input type="text" id="firma" name="firma" placeholder="Firma (optional)..."><br>
+          <label for="email">Email:</label><br>
+          <input type="text" id="email" name="email" placeholder="Email für Rückfragen (keine Werbung)..."><br>
+          <div class="phone"><div class="telefon"><label for="telefon">Telefon:</label>
+            <input type="text" id="telefon"   name="telefon" placeholder="Telefon (optional/falls gewünscht)..."></div>
+            <div class="checkbox"><label for="rr">Rückruf?</label><br>
+            <input type="checkbox" id="rr" name="rr" ><br></div></div>
+            <label for="etc">Bemerkung:</label><br>
+            <input type="text" id="etc" name="etc" style="height: 300px; padding: 10px;" placeholder="Erzählen Sie hier etwas über Ihr Anliegen, so können wir Ihr Anliegen zielgerichteter angehen..."><br>
+          </form>
+      </div>
+
+    </main>
   </body>
 </html>
