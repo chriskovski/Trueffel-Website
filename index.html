@@ -16,44 +16,69 @@
   </head>
 
   <body>
-    <header id="header">
+
+    <!--Sidebar + Logo-->
+    <header id="header">  
+      <a href="#header" class="navbar logo"></a>
+        <nav class="sidebar">
+          <a href="#" class="navbar about"><i class="gg-profile"></i><p>ÜBER UNS</p></a>
+          <a href="#" class="navbar rezepte"><i class="gg-bowl"></i><p>REZEPTE</p></a>
+          <a href="#formular" class="navbar kontakt"><i class="gg-mail"></i><p>KONTAKT</p></a>
+        </nav>
       
-        <a href="#header" class="navbar logo">Trüffeling</a>
-      <nav class="sidebar">
-        <div class="navbar about"><i class="gg-profile"></i><a href="#">ÜBER UNS</a></div>
-        <div class="navbar rezepte"><i class="gg-bowl"></i><a href="#">REZEPTE</a></div>
-        <div class="navbar kontakt"><i class="gg-mail"></i><a href="#formular">KONTAKT</a></div>
-      </nav>
-      
+    <!--Landing Page-->
       <div class="hero color">
         <div id="herotext">
           <h1>FEINSTE TRÜFFEL.<br>HANDGELESEN.</h1>
-          <button>HIER BESTELLEN</button>
+          <button class="block" onclick="window.location.href='#formular'"><p>HIER BESTELLEN</p></button>
         </div>
       </div>
     </header>
     
     <main>
-      <div id="formular"><h2>HOLEN SIE SICH IHRE PREISAUSKUNFT</h2>
-        <p>Jeder Feinschmecker weiß: Trüffel aus Rumänien sind etwas ganz besonderes! Daher behandeln wir jeden Trüffel auch besonders. Schreiben Sie uns einfach mit dem unten stehendem Formular, wir können Sie persönlich nach Ihren Wünschen und Bedürfnissen beraten. Für Privatkunden, Großkunden, Restaurants, Patisserien & Feinschmeckerladen.</p>
+      <div id="formular"><div id="formular-text"><h2>HOLEN SIE SICH IHRE PREISAUSKUNFT!</h2>
+        <p>Jeder Feinschmecker weiß: Trüffel aus Rumänien sind etwas ganz besonderes! Daher behandeln wir jeden Trüffel auch besonders. Schreiben Sie uns einfach mit dem unten stehendem Formular, wir können Sie persönlich nach Ihren Wünschen und Bedürfnissen beraten. Für Privatkunden, Großkunden, Restaurants, Patisserien & Feinschmeckerläden.</p></div>
+        
         <form>
-          <label for="vname">Vorname:</label><br>
-          <input type="text" id="vname" name="vname" placeholder="Vorname..."><br>
-          <label for="nname">Nachname:</label><br>
-          <input type="text" id="nname" name="nname" placeholder="Nachname..."><br>
+          <!--Anrede, Vorname, Nachname (Pflichtfelder)-->
+          <div class="name">
+            <div class="gender"><label for="gender" class="required">Anrede:</label>  
+            <select name="gender" id="gender" required>
+              <option value="">------</option>
+              <option value="herr">Herr</option>  
+              <option value="frau">Frau</option>
+              <option value="divers">Divers</option></select></div>
+            <div class="vname"><label for="vname" class="required">Vorname:</label>
+            <input type="text" id="vname" name="vname" placeholder="Vorname..."required></div>
+            <div class="nname"><label for="nname" class="required">Nachname:</label>
+            <input type="text" id="nname" name="nname" placeholder="Nachname..."required></div>
+          </div>
+          
+          <!--Firmenname (optional)-->
           <label for="firma">Firma:</label><br>
           <input type="text" id="firma" name="firma" placeholder="Firma (optional)..."><br>
-          <label for="email">Email:</label><br>
-          <input type="text" id="email" name="email" placeholder="Email für Rückfragen (keine Werbung)..."><br>
+          
+          <!--Email-Adresse (Pflichtfeld)-->
+          <label for="email" class="required">Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="Email für Rückfragen (keine Werbung)..." required><br>
+          
+          <!--Telefonnummer + Rückruf gewünscht (optional)-->
           <div class="phone"><div class="telefon"><label for="telefon">Telefon:</label>
-            <input type="text" id="telefon"   name="telefon" placeholder="Telefon (optional/falls gewünscht)..."></div>
-            <div class="checkbox"><label for="rr">Rückruf?</label><br>
-            <input type="checkbox" id="rr" name="rr" ><br></div></div>
-            <label for="etc">Bemerkung:</label><br>
-            <input type="text" id="etc" name="etc" style="height: 300px; padding: 10px;" placeholder="Erzählen Sie hier etwas über Ihr Anliegen, so können wir Ihr Anliegen zielgerichteter angehen..."><br>
-          </form>
-      </div>
+          <input type="text" id="telefon" name="telefon" placeholder="Telefon (optional/falls gewünscht)..."></div><div class="checkbox"><label for="rr">Rückruf?</label><br>
+          <input type="checkbox" id="rr" name="rr" ><br></div></div>
+          
+          <!--Sonstige Bemerkungen-->
+          <label for="etc" class="required">Bemerkung:</label><br>
+          <textarea id="etc" name="etc" placeholder="Erzählen Sie hier etwas über Ihr Anliegen, so können wir Sie zielgerichteter beraten..." required></textarea><br>
 
+          <!--Submit-Button-->
+          <input type="submit" id="submit">
+          <p class="pflichtfeld">Pflichtfeld</p>
+        </form>
+      </div>
+      <footer>
+        <p>Der Trüffeling</p>
+      </footer>
     </main>
   </body>
 </html>

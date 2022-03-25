@@ -1,10 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
+  
 }
 body {
   margin: 0;
-  font: bold 18px/1.4 'Open Sans', arial, sans-serif;
   color: #5C0300;
+  font-family: "Apple Chancery",serif,sans-serif;
+  font-size: 1.4rem;
 }
 
 header {
@@ -24,6 +29,9 @@ main{
   background-image: linear-gradient(rgba(55,107,68, 1), #D1CDA7, #FBF9EC);
   backdrop-filter: blur(50px);
   box-shadow: 0 -20px 20px 0px rgba(55,107,68, 1);
+  height: 100%;
+  background-size: auto;
+  padding-bottom: 10vh;
 }
 
 .sidebar {
@@ -32,56 +40,81 @@ main{
   justify-content: space-around;
   position: fixed;
   height: 65vh;
+  width: 8vw;
   z-index: 1;
   right: 0;
-  margin: 50px;
+  margin: 40px;
   margin-top: 25vh;
-  background-color: rgba(0,92,32,0.7);
+  background-color: rgba(255,255,255, 0.7);
   backdrop-filter: blur(10px);
   box-shadow: inset 1px 1px 20px rgb(0, 0, 0);
   padding: 20px 0;
   border-radius: 15px;
 }
+
 .navbar {
-  width: 150px;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  
+  text-align: center;  
+  text-decoration: none;
 }
+
 .logo {
   position: fixed;
-  height: 10vh;
+  height: 17vh;
+  width: 8vw;
   z-index: 1;
   right: 0;
-  margin: 50px;
-  padding-top: 2px;
-  background-color: rgba(0,92,32,0.7);
+  margin: 40px;
+  padding-bottom: 60px;
   backdrop-filter: blur(10px);
   box-shadow: inset 1px 1px 20px rgb(0, 0, 0);
   border-radius: 15px;
   border-bottom: 0;
-  font-family: "Aguafina Script";
-  font-size: 36px;  
-  text-align: center;
-  text-decoration: none;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  color: rgba(218, 165, 32);
+  background: url(/images/logo3_24_115933-removebg-preview.png) no-repeat;
+  background-color: rgba(255,255,255, 0.7);
+  background-size: 100%;
+  background-position: 0%;
+
 }
 
-.navbar a {
-  text-decoration: none;
-  color: white; 
+.block p {
+  color: black; 
   font-weight: 700;
   display: inline-block;
   position:relative;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  background-color: black;
+  color: transparent;
+  text-shadow: 2px 2px 3px #ffffff80;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+.navbar p,
+.navbar a {
+  color: black; 
+  font-weight: 700;
+  display: inline-block;
+  position:relative;
+  font-size: 1vw;
+  margin-top: 0;
+  letter-spacing: 3px;
+  background-color: black;
+  color: transparent;
+  text-shadow: 2px 2px 3px #ffffff90;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
 }
 
 i {
   margin: 6px;
-  color: white;
+  color: goldenrod;
+  text-decoration: none;
 }
 
 @keyframes bounce {
@@ -101,28 +134,28 @@ i {
 	}
 }
 .navbar:hover {
-  background-color: #FFFFFF44;
-  border-radius: 15px;
-  box-shadow: inset 1px 1px 20px white;
-  animation: bounce 1s;
-  text-shadow: -1px -1px 0 rgba(218, 165, 32), 1px -1px 0 rgba(218, 165, 32), -1px 1px 0 rgba(218, 165, 32), 1px 1px 0 rgba(218, 165, 32);
+  background-color: #f5f5f580;
   
+  border-radius: 15px;
+  box-shadow: inset 1px 1px 50px goldenrod;
+  animation: bounce 1s;
 }
 .logo:hover {
-  background-color:rgba(0,92,32,0.7);
-  box-shadow: inset 1px 1px 20px white;
+  background-color:whitesmoke;
+  box-shadow: inset 1px 1px 20px goldenrod;
 }
- 
+.logo:active,
+.navbar:active {
+box-shadow: inset 1px 1px 20px rgb(0, 0, 0);
+}
+
 .about,
 .kontakt,
 .rezepte {
   display: flex;
   flex-direction: column;
-  position: relative;
-  color: #0087ca;
+  position: relative; 
 }
-
-
 
 .hero {
   display: flex;
@@ -133,8 +166,8 @@ i {
 
 h1 {
   line-height: 250%;
-  font-size: 4rem;
-  text-decoration: underline green; 
+  font-size: 3.5vw;
+  text-decoration: underline rgb(1, 99, 1); 
   text-underline-offset: 9px;
   letter-spacing: 3px;
   background-color: #470301;
@@ -144,36 +177,99 @@ h1 {
   -moz-background-clip: text;
   background-clip: text;
 }
-button {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1vw;
-  color: white;
-  background-color: rgb(61, 44, 6);
-  font-size: 1.1rem;
-  font-weight: 700;
-  border-radius: 5px;
-  box-shadow: 1px 1px 4px rgb(0, 0, 0);
+h2 {
+  letter-spacing: 3px;
+  text-decoration: underline 5px goldenrod;
+  text-underline-offset: 8px;
+  background-color: #470301;
+  color: transparent;
+  text-shadow: 2px 2px 3px #ffffff50;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  margin-top: 5px;
+  line-height: 225%;
+  text-align: center;
 }
-button:hover {
+
+.block {
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+button::before,
+button::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+button,
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease;
+  position: relative;
+  border: 2px solid #111;
+  box-shadow: 1px 1px 2px rgb(0, 0, 0);
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgb(218, 165, 32, 0.7);
+}
+
+button:after {
+  left: -100%;
+  clip-path: polygon(10% 0, 70% 0, 90% 100%, 30% 100%);
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 300ms ease;
+  
+}
+
+button:hover::after {
+  left: 100%;
+}
+button:active,
+#submit:active {
   box-shadow: inset 1px 1px 20px rgb(0, 0, 0)
 }
 
 #formular {
   display: flex;
   flex-direction: column;
-  margin-left: 8vw;
-  
-  width: 65%;
-  padding: 3vh;
-  background-color: rgba(0,92,32,0.7);
+  background-color: rgba(255,255,255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 5px 3px rgb(0, 0, 0);
+  padding: 30px 30px;
   border-radius: 15px;
-  color: white;
-  box-shadow: 2px 2px 3px rgb(0, 0, 0);
+  margin-right: 25vw;
+  margin-left: 15vw;
 }
 
-input {
+form,
+#formular-text {
+  box-shadow: inset 1px 1px 3px 2px rgb(0, 0, 0);
+  border-radius: 15px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+form {
+  padding-top: 15px;
+  margin-bottom: 0;
+}
+
+#formular p {
+  margin-bottom: 20px;
+}
+
+input,
+textarea,
+select {
   width: 100%;
   padding: 10px;
   border-radius: 15px;
@@ -182,42 +278,96 @@ input {
   background-color: white;
   box-sizing: border-box;
   box-shadow: inset 1px 1px 3px rgb(0, 0, 0);
-  
+  font-size: 1.1rem;
+  font-family: "Apple Chancery",serif,sans-serif;
 }
-.phone {
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: inset 1px 1px 3px goldenrod, inset -1px 1px 3px goldenrod, inset 1px -1px 3px goldenrod, inset -1px -1px 3px goldenrod;
+}
+
+.phone,
+.name {
   display: flex;
   justify-content: space-between;
+  column-gap: 5%;
+  margin-bottom: 0;
 }
-.rr,
-.telefon {
+
+.telefon,
+.vname,
+.nname,
+.gender {
   display:flex;
   flex-direction: column;
-  
 }
 
 .checkbox {
-  padding: 0 20px;
+  margin-right: 20px;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
 }
-.telefon {
+
+
+#rr {
+  margin: auto;
+  width: fit-content;
+}
+
+.required::after {
+  display: inline-block;
+  content: "*";
+  color: red;
+}
+
+.telefon,
+.vname,
+.nname {
   flex: 1;
 }
 
-#rr {
-  width: 20px;
-  height: 20px;
-  margin: 20px;
-  margin-top: 15px;
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 0;
+}
+
+label {
+  text-decoration: underline 2px goldenrod;
+}
+
+#submit {
+  width: 6em;
+  margin-left: auto;
+}
+
+.pflichtfeld {
+  width: fit-content;
+  margin-top: -4vh;
+  font-size: 0.8em;
+}
+
+.pflichtfeld::before {
+  content: "*";
+  color: red;
 }
 
 ::placeholder {
   font-style: italic;
-  position: absolute;
-  white-space: pre-line;
 }
 
-
-
-
-
-
-
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #00000070;
+  color: white;
+  text-align: center;
+}
