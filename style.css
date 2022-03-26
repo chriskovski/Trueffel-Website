@@ -13,25 +13,26 @@ body {
 }
 
 header {
-  background: url(/images/forest-3622519.jpg) no-repeat;
-  height: 130vh;
+  background: url(images/forest-3622519.jpg) no-repeat;
+  height: 120vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin: 0;
+  margin: 0;  
 }
 
 
 main{
-  margin-top: -5vh;
+  margin-top: -2vh;
   padding-top: 15vh;
-  background-image: linear-gradient(rgba(55,107,68, 1), #D1CDA7, #FBF9EC);
+  background-image: linear-gradient(rgba(55,107,68), #D1CDA7, #FBF9EC);
   backdrop-filter: blur(50px);
-  box-shadow: 0 -20px 20px 0px rgba(55,107,68, 1);
+  box-shadow: 0 -20px 50px 50px rgba(55,107,68);
   height: 100%;
   background-size: auto;
   padding-bottom: 10vh;
+  z-index: 1;
 }
 
 .sidebar {
@@ -73,7 +74,7 @@ main{
   box-shadow: inset 1px 1px 20px rgb(0, 0, 0);
   border-radius: 15px;
   border-bottom: 0;
-  background: url(/images/logo3_24_115933-removebg-preview.png) no-repeat;
+  background: url(images/logo3_24_115933-removebg-preview.png) no-repeat;
   background-color: rgba(255,255,255, 0.7);
   background-size: 100%;
   background-position: 0%;
@@ -233,8 +234,14 @@ button:after {
 button:hover::after {
   left: 100%;
 }
+
+.fa:hover {
+  box-shadow: 1px 1px 3px goldenrod, -1px 1px 3px goldenrod, 1px -1px 3px goldenrod, -1px -1px 3px goldenrod;
+}
+
 button:active,
-#submit:active {
+#submit:active,
+.fa:active {
   box-shadow: inset 1px 1px 20px rgb(0, 0, 0)
 }
 
@@ -264,6 +271,7 @@ form {
 }
 
 #formular p {
+  font-family: 'Alegreya', serif;
   margin-bottom: 20px;
 }
 
@@ -339,6 +347,7 @@ textarea {
 
 label {
   text-decoration: underline 2px goldenrod;
+  font-family: 'Alegreya', serif;
 }
 
 #submit {
@@ -370,4 +379,49 @@ footer {
   background-color: #00000070;
   color: white;
   text-align: center;
+  display: flex;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.socials {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials p {
+  margin-top: 0;
+}
+
+.fa {
+  padding-top: 15px;
+  font-size: 50px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: whitesmoke;
+  margin: 5px 10px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+
+.fa-instagram {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.fa-facebook {
+  background: linear-gradient(120deg, #3B5998, #FFFFFF);
+}
+
+.fa-twitter {
+  background: linear-gradient(45deg, #66757F, #00ACEE, #36D8FF, #F5F8FA, #FFFFFF);
+}
+
+.fa-pinterest {
+  background: linear-gradient(-120deg, #FFFFFF, #BD081C, #000000);
 }
